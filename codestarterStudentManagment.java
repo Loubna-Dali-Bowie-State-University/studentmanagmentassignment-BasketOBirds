@@ -132,21 +132,6 @@ class StudentManagement {
     }
 }
 
-/*
-Part 2: StudentManagement Class
-
-Array of Students:
-
-Create a Student[] students array to store multiple Student objects (up to 5 students for simplicity).
-
-Add Students:
-
-Write a method addStudent(Student student) that adds a Student to the students array.
-Ensure you don’t exceed the array limit. If the array is full, print a message indicating that no more students can be added.
-Display All Students:
-
-Write a method displayAllStudents() that iterates over the students array and displays each student’s details (name, id, and average grade).
- */
 public class Lab_Student_Record_Management {
 
     public static void main(String[] args) {
@@ -163,7 +148,7 @@ public class Lab_Student_Record_Management {
             int id = scan.nextInt();
 
             int[] grades = new int[5];
-            System.out.println("Enter 5 grades for the student (between 0 - 100): ");
+            System.out.println("Enter 5 grades for the student (between 0 - 100):  \n");
             for (int j = 0; j < 5; j++) {
                 grades[j] = scan.nextInt();
             }
@@ -172,6 +157,15 @@ public class Lab_Student_Record_Management {
             Student dft2 = new Student(name, id, grades);
             management.addStudent(dft2);
         }
+
+        management.displayStudentInfo();
+        int[] grade = {85, 80, 78};
+        int[] grade2 = {92, 87, 75, 80};
+        Student stu1 = new Student("Alice", 01, grade);
+        Student stu2 = new Student("Bob", 02, grade2);
+
+        management.addStudent(stu1);
+        management.addStudent(stu2);
 
         management.displayStudentInfo();
         //Student dft = new Student();
